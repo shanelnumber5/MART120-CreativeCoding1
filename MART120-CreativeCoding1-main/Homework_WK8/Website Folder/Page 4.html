@@ -1,0 +1,111 @@
+<html>
+ 
+<head>
+       <meta keywords="linking a style sheet">
+        <link rel="stylesheet"> 
+        <!--CSS ONLY-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+ 
+ 
+ 
+ <style>
+        body
+        {
+        background-color: rgba(119, 94, 145, 0.397);
+        background-blend-mode:luminosity;
+        }
+
+
+    
+        span
+        {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color:rebeccapurple
+        }
+</style> 
+
+    <title>Math Game</title> 
+
+    <script>
+        var actualAnswer;
+        var number1;
+        var number2;
+        var correct;
+        var incorrect;
+        // create a variable for number of correct answers
+        // create another variable for number of incorrect answers
+        // create a variable for total number of questions (this is the end)
+        // create a variable that says how many questions were performed
+
+        function printQuestion() 
+        {
+            var number1, number2;
+            for(var i = 0; i < 5; i++)
+            {
+                number1 = Math.floor(Math.random() * 10);
+                number2 = Math.floor(Math.random() * 10);
+
+            }
+            
+            actualAnswer = number1 + number2;
+            document.getElementById("question").innerHTML = "What is " + number1 + " + " + number2 + "?";
+        }
+        
+        function checkAnswer() 
+            {
+            var myAnswer = document.getElementById("answer").value; 
+            if(myAnswer == actualAnswer)
+            {
+                // increase the correct answer variable
+                document.getElementById("finalResult").innerHTML = "Good Job! You Answered " + "" + myAnswer;  
+                printQuestion();
+                document.getElementById("answer").value = "";
+                printQuestion(); // move this outside of the if statement
+            }
+            else
+            {
+                // increase the incorrect answer variable
+                document.getElementById("finalResult").innerHTML = "You Suck at Math!  The Actual Answer is " + actualAnswer;  
+            }
+
+        function correct()
+            {
+                test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+                test.innerHTML = "<h2>You got "+showscore +"% out of "+questions.length+"</h2>";
+                test.innerHTML = "<button onclick='EndExam()'>End the Exam</button>";
+                pos = 0;
+                correct = 0;
+                document.getElementById("starttime").style.display += 'none';
+                document.getElementById("showtime").style.display += 'none';
+            }
+        }
+
+    </script>
+
+</head>  
+
+    <p></p>
+    <center><h1><span><u> Boring Math Game</u></span></h1></center>
+    <p></p>
+    <center><h4><span>Directions: Try to Get as Many Right as Possible</span></h4></center>
+
+    <p></p>
+    <body onload="printQuestion();"> 
+    
+    <br><center><h2><span><div id="question"></h2></span></div>
+    <p></p>
+    <br><h5><span>&nbsp;Your Answer <input type="input" id="answer"></h5></br></span>&nbsp;
+    <span><div id="finalResult"></div></span>
+    <br><h2><button id="mySubmit" class="btn-primary" onclick="checkAnswer();" >Submit</button></h2></center></br></center>
+
+            
+    
+
+    <span><center><h2>Go to:</h2><a href="Page 1.html"><h5>About Shanel Locke</h5></a></center></span>
+
+    <span><center></h5><a href="Page 2.html"><h5>My Artwork</h5></a></center></span>
+
+    <span><center><a href="Page 3.html"><h5>Contact Me</h5></a></center></span>
+
+</body>
+</html>

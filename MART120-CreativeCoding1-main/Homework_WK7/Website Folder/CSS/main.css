@@ -1,0 +1,13 @@
+body{
+    background-image: url(../Images/texture.jpg);
+    background-position: center;
+    background-blend-mode: lighten;
+    background-color: rgba(119, 94, 145, 0.397);
+}
+
+.myClass{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(77, 5, 65);  
+    font-size: larger;
+    font-weight: 400;
+}

@@ -1,0 +1,117 @@
+<html>
+ 
+<head>
+       <meta keywords="linking a style sheet">
+        <link rel="stylesheet"> 
+        <!--CSS ONLY-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+ 
+ 
+ 
+ <style>
+        body
+        {
+        background-color: rgba(119, 94, 145, 0.397);
+        background-blend-mode:luminosity;
+        }
+
+
+    
+        span
+        {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color:rebeccapurple
+        }
+</style> 
+
+    <title>Contact Me</title> 
+
+    <script>
+        function getInformation()
+        {
+            var firstName; 
+            name = document.getElementById("fName").value;
+            if(name == "")
+            {
+                window.alert("First Name is Required");
+                document.getElementById("fName").style.backgroundColor = "red"; 
+                document.getElementById("fName").focus();
+            }
+           
+            var lastName; 
+            lastName = document.getElementById("lName").value;
+            if(lastName == "")
+            {
+                window.alert("Last Name is Required");
+            }
+            var Email; 
+            Email = document.getElementById("Email").value;
+            if(Email == "")
+            {
+                window.alert("Email is Required");
+            }
+            var myYes; 
+            myYes = document.getElementById("myYes");
+            if(myYes.checked == false)
+            {
+                window.alert("Please Agree to the Terms of Agreement.");
+            }
+            var myNo; 
+
+            myNo = document.getElementById("myNo");
+            if (myNo.checked == false)
+            {
+                window.alert("Please Agree to the Terms of Agreement.")
+            }
+            
+            
+        }
+        window.alert("Hi " + firstName + " " + lastName);
+     </script>
+</head>  
+
+<body>    
+    
+    <p></p>
+    <h2><span><center><u>Want to Get to Know ME Better?</u></span></center></h2>
+    <h1><span><center>Contact Me!</center></span></h1>
+    
+    <center>
+        <form type="Post">
+        <table>
+            <tr>
+                <td><span class="myClass">First Name:</span></td>
+                <td><input type="text" id="fName"></td>
+            </tr>
+            <tr>
+                <td><span class="myClass">Last Name:</span></td>
+                <td><input type="text" id="lName"></td>
+            </tr>
+            <tr>
+                <td><span class="myClass">Email Address:</span></td>
+                <td><input type='text' id="Email"></td>
+            </tr>
+        </table>
+        <div id="finalResult"></div>
+
+       
+        <br><h5><span class="myClass">Do you accept the terms of agreement?</span></h5><br>
+
+        <span class="myClass"><input type="radio" id="myYes" >Yes</span>
+
+        <p><span class="myClass"><input type="radio" id="myNo" >No</span></p> 
+
+        <h2><button id="mySubmit" class="btn-primary" onclick="getInformation();" >Submit</button></h2>
+    </form>
+
+</center>
+
+    <center><img src="./images/weirdart.jpg" height='260' width='350' />  <h5><span>(Weird Student Artwork Submitted to Me This Week)</span></h5></html></center>
+
+    <span><center><h2>Go to:</h2><a href="Page 1.html"><h5>About Shanel Locke</h5></a></center></span>
+
+    <span><center></h5><a href="Page 2.html"><h5>My Artwork</h5></a></center></span>
+
+
+</body>
+</html>
