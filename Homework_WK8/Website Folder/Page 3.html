@@ -15,8 +15,6 @@
         background-blend-mode:luminosity;
         }
 
-
-    
         span
         {
             font-family: Georgia, 'Times New Roman', Times, serif;
@@ -30,23 +28,22 @@
         function getInformation()
         {
             var firstName; 
-            name = document.getElementById("fName").value;
+            name = document.getElementById("fname").value;
             if(name == "")
             {
                 window.alert("First Name is Required");
-                document.getElementById("fName").style.backgroundColor = "red"; 
-                document.getElementById("fName").focus();
+                document.getElementById("fname").focus();
             }
            
             var lastName; 
-            lastName = document.getElementById("lName").value;
+            lastName = document.getElementById("lname").value;
             if(lastName == "")
             {
                 window.alert("Last Name is Required");
             }
-            var Email; 
-            Email = document.getElementById("Email").value;
-            if(Email == "")
+            var email; 
+            email = document.getElementById("email").value;
+            if(email == "")
             {
                 window.alert("Email is Required");
             }
@@ -54,10 +51,10 @@
             myYes = document.getElementById("myYes");
             if(myYes.checked == false)
             {
-                window.alert("Please Agree to the Terms of Agreement.");
+                
             }
-            var myNo; 
 
+            var myNo; 
             myNo = document.getElementById("myNo");
             if (myNo.checked == false)
             {
@@ -68,30 +65,33 @@
         }
         window.alert("Hi " + firstName + " " + lastName);
      </script>
-</head>  
 
-<body>    
-    
-    <p></p>
-    <h2><span><center><u>Want to Get to Know ME Better?</u></span></center></h2>
+<body>
+    <h2><span><center><u>Want to Get to Know ME Better?</u></center></span></h2>
     <h1><span><center>Contact Me!</center></span></h1>
     
-    <center>
-        <form type="Post">
-        <table>
-            <tr>
-                <td><span class="myClass">First Name:</span></td>
-                <td><input type="text" id="fName"></td>
-            </tr>
-            <tr>
-                <td><span class="myClass">Last Name:</span></td>
-                <td><input type="text" id="lName"></td>
-            </tr>
-            <tr>
-                <td><span class="myClass">Email Address:</span></td>
-                <td><input type='text' id="Email"></td>
-            </tr>
-        </table>
+    <div class="content">
+
+        <form>
+        <label for="fname">First Name</label>
+        <input
+            type="text"
+            id="fname"
+            placeholder="Your First Name" required>
+        
+            <label for="lname">Last Name</label>
+            <input
+                type="text"
+                id="lname"
+                placeholder="Your Last Name" >
+
+            <label for="email">Your Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email Address" required >
+            </form>
+        </div>
         <div id="finalResult"></div>
 
        

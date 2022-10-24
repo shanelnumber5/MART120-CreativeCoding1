@@ -23,3 +23,17 @@ section
 {
     text-align: center;
 }
+
+.content {
+    background: white;
+    padding: 3em;
+}
+
+::placeholder {
+    font-size: 80px;
+    background-color: red;
+}
+
+:placeholder-shown {
+    background-color: red;
+}

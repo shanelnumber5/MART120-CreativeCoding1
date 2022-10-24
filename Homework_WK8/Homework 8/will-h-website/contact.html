@@ -1,0 +1,85 @@
+<html>
+
+<style>
+  body {font-family: 'arial', sans-serif;}
+</style>
+  
+<head>
+  <title>Contact Us</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+  //function getData() {
+    //var name = document.getElementById("txtName").value;
+    //var phone = document.getElementById("txtEmail").value;
+    //get the new field value
+    //document.getElementById("finalResult").innerHTML = "Name: " + name + " Email address: " + phone + " Thank you, we will be in contact soon!";
+  
+</script>
+<script>
+    function checkboxes()
+    {
+        var firstname = document.getElementById("txtName").value;
+        var email = document.getElementById("txtEmail").value;
+        if(firstname == "")
+        {
+            document.getElementById("txtName").style.backgroundColor = "red";
+            document.getElementById("txtName").focus();
+            window.alert("Name is required.")
+        }
+        if(firstname != "" && email == "")
+        {
+            document.getElementById("txtEmail").style.backgroundColor = "red";
+            document.getElementById("txtEmail").focus();
+            window.alert("Email is required.")
+        }
+        if(firstname != "" && email != "")
+        {
+            if(document.getElementById('Agree').checked)
+            {
+              window.alert("Thanks! We will be in touch soon.")
+            }
+            else
+            {
+              window.alert("You are required to check the box for our Terms of Agreement")
+            }
+        }
+    }
+</script>
+
+</head>
+
+<body>
+    <button type="button" class="btn btn-success" onclick="window.location.href='default.html';">Home</button>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='art.html';">Art</button>
+    <button type="button" class="btn">contact</button>
+    <button type="button" class="btn btn-primary" onclick="window.location.href='mathgame.html';">Math Game</button>
+
+
+<h2>Please fill out this form and we will send you more information!</h2>
+
+  <table>
+    <tr>
+      <td>Name</td>
+      <td><input type="text" id="txtName"></td>
+    </tr>
+    <tr height = 20px></tr>
+    <tr>
+      <td>Email Address</td>
+      <td><input type="text" id="txtEmail"></td>
+    </tr>
+    <tr height = 20px></tr>
+      <td>Terms of Agreement Required</td>
+      <td><input type="checkbox" id="Agree"></td>
+    <tr height = 20px></tr>
+    <tr>
+      <td colspan="2"><button id="btnSubmit" onClick="checkboxes();getData();">Submit</button><img src="pics/puter-mail.gif"> </td>
+    </tr>
+  </table>
+  <div id="finalResult"></div>
+
+</body>
+
+</html>

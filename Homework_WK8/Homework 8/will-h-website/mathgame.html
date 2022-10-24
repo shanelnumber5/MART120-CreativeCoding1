@@ -1,0 +1,94 @@
+<html>
+<title>for Loops</title>
+
+<head>
+  <script>
+    var actualAnswer;
+    var number1;
+    var number2;
+    var gamenumber;
+    gamenumber = 0;
+    var correct;
+    correct = 0;
+    var wrong;
+    wrong = 0;
+    var calculation;
+
+    function printQuestion() {
+      number1 = Math.floor(Math.random() * 10);
+      number2 = Math.floor(Math.random() * 10);
+      actualAnswer = number1 + number2;
+      document.getElementById("theQuestion").innerHTML = "What is " + number1 + "+" + number2 + "?";
+    }
+
+    function checkAnswer() {
+        var answer = document.getElementById("txtAnswer").value;
+        gamenumber += 1;
+        if (answer == actualAnswer) {
+            document.getElementById("finalResult").innerHTML = "Good job!";
+            printQuestion();
+            correct += 1;
+        } else {
+            document.getElementById("finalResult").innerHTML = "Oops, not quite! Try this one.";
+            printQuestion();
+            wrong += 1;
+        }
+        math();
+      }
+    
+    function math() {
+        if(gamenumber == 10){
+            window.alert("You've played 10 games!")
+            document.getElementById("CorrectWrong").innerHTML = "You got " + correct + " correct and " + wrong + " wrong.";
+            calculation = (correct / 10) * 100
+            document.getElementById("Percent").innerHTML = "You have scored " + calculation +"% !"
+            window.alert("Your score will be displayed below. Refresh this page to enable scoring again.")
+        }
+    }
+
+    function runGame() {
+      // change the for loop and see what happens
+      for (var i = 1; i < 2; i++) {
+        document.getElementById("message").innerHTML += "<h" + i + ">Welcome to our game!!!</h" + i + "></p>";
+      }
+      printQuestion();
+    }
+
+    runGame();
+  </script>
+</head>
+
+<body onload="runGame();">
+  <h1 style="color:white;background-color:black;text-decoration:none;"><a href="default.html">W. HANLEY</a><a href="art.html"> - art - </a><a href="contact.html">contact</a> - math game</h1>
+  <img src="pics/math-teacher.gif">
+
+  <table>
+    <tr>
+      <td colspan="2">
+        <div id="message"></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <hr size="1">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div id="theQuestion"></div>
+      </td>
+    </tr>
+    <tr>
+      <td>Your answer</td>
+      <td><input type="text" id="txtAnswer"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><button id="btnSubmit" onClick="math();checkAnswer();">Submit</button></td>
+    </tr>
+  </table>
+  <div id="finalResult"></div>
+  <div id="CorrectWrong"></div>
+  <div id="Percent"></div>
+</body>
+
+</html>
