@@ -1,0 +1,21 @@
+.story {
+    color:black;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+  }
+  
+.background {
+    background-image: url("plane-pattern.png");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #text1 {
+    color:darkblue
+  }
+
+  #text2 {
+    text-shadow: 2px 2px 8px blue;
+  }
